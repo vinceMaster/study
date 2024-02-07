@@ -1,0 +1,69 @@
+{
+  "name": "KCC_DocumentUnderstanding",
+  "projectId": "e5c09498-1670-4b8f-9b33-ca7dd354e51d",
+  "description": "yyyy-MM-dd",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.DocumentUnderstanding.ML.Activities": "[1.26.0-preview]",
+    "UiPath.Excel.Activities": "[2.23.0-preview]",
+    "UiPath.Form.Activities": "[23.10.5]",
+    "UiPath.FormActivityLibrary": "[2.0.7]",
+    "UiPath.IntelligentOCR.Activities": "[6.16.0-preview]",
+    "UiPath.Mail.Activities": "[1.22.0-preview]",
+    "UiPath.OCR.Activities": "[3.18.0-preview]",
+    "UiPath.Persistence.Activities": "[1.4.8]",
+    "UiPath.System.Activities": "[23.12.0-preview]",
+    "UiPath.Testing.Activities": "[23.12.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.12.0-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": true,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "e695865f-a007-4953-b419-9a5a7d1c55c1",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

@@ -1,0 +1,1158 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1043.2,6572.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p10="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p6="http://schemas.uipath.com/workflow/activities/intelligentocr/training" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p9="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:uasc="clr-namespace:UiPath.Activities.System.Collections;assembly=UiPath.System.Activities" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upaf="clr-namespace:UiPath.Persistence.Activities.FormTask;assembly=UiPath.Persistence.Activities" xmlns:upat="clr-namespace:UiPath.Persistence.Activities.Tasks;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Editors</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.Storage</x:String>
+      <x:String>UiPath.Studio.Forms.Runtime</x:String>
+      <x:String>UiPath.Forms.Activities</x:String>
+      <x:String>UiPath.Platform.GlobalVariables</x:String>
+      <x:String>UiPath.Forms.Activities.Base</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.Persistence.Activities.BaseTask</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+      <x:String>UiPath.Persistence.Activities.Tasks</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.SmartData.PositionBasedExtraction</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Forms.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Document Understanding" sap:VirtualizedContainerService.HintSize="1053.6,6508" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p10:DocumentTaxonomy" Name="taxonomy" />
+      <Variable x:TypeArguments="x:String" Name="Str_Path" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="fileList" />
+      <Variable x:TypeArguments="x:String" Name="Digitize_text" />
+      <Variable x:TypeArguments="p4:Document" Name="Digitize_dom" />
+      <Variable x:TypeArguments="p7:ClassificationResult[]" Name="autoClassification" />
+      <Variable x:TypeArguments="p7:ClassificationResult[]" Name="Classification_Result" />
+      <Variable x:TypeArguments="x:String" Name="Action" />
+      <Variable x:TypeArguments="x:String" Name="apiSTR" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:LoadTaxonomy sap2010:Annotation.AnnotationText="* 처리할 문서 유형과 필드를 정의합니다." DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="991.2,136.8" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_2" Taxonomy="[taxonomy]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:LoadTaxonomy>
+    <ui:ForEachFileX sap2010:Annotation.AnnotationText="* Sample 폴더 내 파일들을 리스트로 변환" DisplayName="For Each File In Folder - Sample" Folder="[Environment.GetEnvironmentVariable(&quot;USERPROFILE&quot;)+&quot;\Documents\UiPath\Invoice_DU\Data\Sample&quot;]" sap:VirtualizedContainerService.HintSize="991.2,68.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX.Body>
+        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="449.6,276.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <InvokeMethod sap2010:Annotation.AnnotationText="* fileList라는 List 변수로 생성" DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="387.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Add">
+              <InvokeMethod.TargetObject>
+                <InArgument x:TypeArguments="scg:List(x:String)">[fileList]</InArgument>
+              </InvokeMethod.TargetObject>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <InArgument x:TypeArguments="x:String">[CurrentFile.FullName]</InArgument>
+            </InvokeMethod>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachFileX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachFileX>
+    <Assign sap:VirtualizedContainerService.HintSize="991.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_21">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[apiSTR]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Pj8/dXX0y6VYkkRWLtbE6gqKVg6d4Ale4YjNz2+a5/DW1UUsn5aW+pPdL4Tp4OjwQ8lRfDEhh+EQAxLv89roSg==</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="* fileList 내 파일들을 순차적으로 반복" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="991.2,5988.8" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[fileList]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="CurrentFile" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="957.6,5769.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine sap2010:Annotation.AnnotationText="* 현재 진행 중인 파일의 전체 경로 확인" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="914.4,121.6" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentFile]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </WriteLine>
+            <Assign sap2010:Annotation.AnnotationText="* 현재 진행 중인 파일의 전체 경로를 Str_Path 변수에 저장" sap:VirtualizedContainerService.HintSize="914.4,112.8" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Str_Path]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentFile]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+            <p:DigitizeDocument sap2010:Annotation.AnnotationText="* 현재 진행 중인 파일의 데이터를 OCR을 통해 디지털 데이터로 변환" ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[Digitize_dom]" DocumentPath="[Str_Path]" DocumentText="[Digitize_text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="914.4,344" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+              <p:DigitizeDocument.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument1>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument1>
+                  <ActivityFunc.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                  </ActivityFunc.Argument2>
+                  <p1:CjkOCR Output="{x:Null}" Text="{x:Null}" ApiKey="jpXD+KT7S5by592ClCuaNPimPo6B24iVIGA+q82WOM4Eapc1VPfDaQjca9kQQPK1sX8t3o2acWtKG/t8V6Ipjw==" ComputeSkewAngle="False" DisplayName="OCR - Japanese, Chinese, Korean" Endpoint="https://du.uipath.com/cjk-ocr" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,24.8" sap2010:WorkflowViewState.IdRef="CjkOCR_1" Image="[Image]" Language="auto" NoopExecution="False" PredictionId="[PredictionId]" Profile="None" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:DigitizeDocument.OCREngine>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p:DigitizeDocument>
+            <p2:ClassifyDocumentScope ClassificationResults="[autoClassification]" DisplayName="Classify Document Scope" DocumentObjectModel="[Digitize_dom]" DocumentPath="[Str_Path]" DocumentText="[Digitize_text]" sap:VirtualizedContainerService.HintSize="914.4,539.2" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIa6d9a13828754d98804fdd5be32b0260&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Receipt&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}},&quot;UId1f43fc5a525460e832411d2c9255cb3&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Receipt&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}},&quot;UI278eeb4482744385ad41497946b95cd9&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:&quot;\&quot;Invoice\&quot;&quot;,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Receipt&quot;,&quot;ClassifierDocumentTypeId&quot;:&quot;\&quot;receipt\&quot;&quot;,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UIa6d9a13828754d98804fdd5be32b0260&quot;:&quot;0&quot;,&quot;UI278eeb4482744385ad41497946b95cd9&quot;:&quot;0&quot;,&quot;UId1f43fc5a525460e832411d2c9255cb3&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UIa6d9a13828754d98804fdd5be32b0260&quot;:[],&quot;UId1f43fc5a525460e832411d2c9255cb3&quot;:[],&quot;UI278eeb4482744385ad41497946b95cd9&quot;:[&quot;Invoice&quot;,&quot;receipt&quot;]}}">
+              <p2:ClassifyDocumentScope.Classifiers>
+                <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="233.6,212.8" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_2" LearningFilePath="DocumentProcessing\Keyword.json" PersistenceId="UIa6d9a13828754d98804fdd5be32b0260">
+                  <p2:KeywordBasedClassifier.ClassifierResult>
+                    <OutArgument x:TypeArguments="p3:ClassifierResult">
+                      <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
+                        <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassifierResult" />
+                      </DelegateArgumentReference>
+                    </OutArgument>
+                  </p2:KeywordBasedClassifier.ClassifierResult>
+                  <p2:KeywordBasedClassifier.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p4:Document">
+                      <DelegateArgumentValue x:TypeArguments="p4:Document">
+                        <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:KeywordBasedClassifier.DocumentObjectModel>
+                  <p2:KeywordBasedClassifier.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:KeywordBasedClassifier.DocumentPath>
+                  <p2:KeywordBasedClassifier.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:KeywordBasedClassifier.DocumentText>
+                  <p2:KeywordBasedClassifier.DocumentTypes>
+                    <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
+                      <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
+                        <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:KeywordBasedClassifier.DocumentTypes>
+                  <p2:KeywordBasedClassifier.PredictionId>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:KeywordBasedClassifier.PredictionId>
+                </p2:KeywordBasedClassifier>
+                <p2:IntelligentKeywordClassifier LearningData="{x:Null}" TimeoutMs="{x:Null}" ApiKey="[apiSTR]" DisplayName="Intelligent Keyword Classifier" Endpoint="https://du.uipath.com/svc/intelligentkeywords" sap:VirtualizedContainerService.HintSize="233.6,212.8" sap2010:WorkflowViewState.IdRef="IntelligentKeywordClassifier_2" LearningFilePath="DocumentProcessing\Intellignet_Keyword.json" PerformDocumentSplitting="True" PersistenceId="UId1f43fc5a525460e832411d2c9255cb3" SendDocumentsForAlgorithmImprovements="True" UsePageNumbers="False">
+                  <p2:IntelligentKeywordClassifier.ClassifierResult>
+                    <OutArgument x:TypeArguments="p3:ClassifierResult">
+                      <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
+                        <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassifierResult" />
+                      </DelegateArgumentReference>
+                    </OutArgument>
+                  </p2:IntelligentKeywordClassifier.ClassifierResult>
+                  <p2:IntelligentKeywordClassifier.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p4:Document">
+                      <DelegateArgumentValue x:TypeArguments="p4:Document">
+                        <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:IntelligentKeywordClassifier.DocumentObjectModel>
+                  <p2:IntelligentKeywordClassifier.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:IntelligentKeywordClassifier.DocumentPath>
+                  <p2:IntelligentKeywordClassifier.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:IntelligentKeywordClassifier.DocumentText>
+                  <p2:IntelligentKeywordClassifier.DocumentTypes>
+                    <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
+                      <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
+                        <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:IntelligentKeywordClassifier.DocumentTypes>
+                  <p2:IntelligentKeywordClassifier.PredictionId>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p2:IntelligentKeywordClassifier.PredictionId>
+                </p2:IntelligentKeywordClassifier>
+                <p5:MachineLearningClassifier Endpoint="{x:Null}" ApiKey="[apiSTR]" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;Pj8/dXX0y6VYkkRWLtbE6gqKVg6d4Ale4YjNz2+a5/DW1UUsn5aW+pPdL4Tp4OjwQ8lRfDEhh+EQAxLv89roSg==&quot;,&quot;SelectedMLSkill&quot;:&quot;DU_Classify&quot;,&quot;AvailableMLSkills&quot;:[&quot;DU_Classify&quot;,&quot;DU_Receipt&quot;]}" DisplayName="Machine Learning Classifier" sap:VirtualizedContainerService.HintSize="233.6,212.8" sap2010:WorkflowViewState.IdRef="MachineLearningClassifier_5" PersistenceId="UI278eeb4482744385ad41497946b95cd9" RetryOnFailure="True" SelectedMLSkill="DU_Classify" Timeout="100000">
+                  <p5:MachineLearningClassifier.AvailableMLSkills>
+                    <scg:List x:TypeArguments="x:String" Capacity="3">
+                      <x:String>DU_Classify</x:String>
+                      <x:String>DU_Invoivce</x:String>
+                      <x:String>DU_Receipt</x:String>
+                    </scg:List>
+                  </p5:MachineLearningClassifier.AvailableMLSkills>
+                  <p5:MachineLearningClassifier.ClassifierResult>
+                    <OutArgument x:TypeArguments="p3:ClassifierResult">
+                      <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
+                        <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassifierResult" />
+                      </DelegateArgumentReference>
+                    </OutArgument>
+                  </p5:MachineLearningClassifier.ClassifierResult>
+                  <p5:MachineLearningClassifier.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p4:Document">
+                      <DelegateArgumentValue x:TypeArguments="p4:Document">
+                        <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifier.DocumentObjectModel>
+                  <p5:MachineLearningClassifier.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifier.DocumentPath>
+                  <p5:MachineLearningClassifier.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifier.DocumentText>
+                  <p5:MachineLearningClassifier.DocumentTypes>
+                    <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
+                      <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
+                        <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifier.DocumentTypes>
+                  <p5:MachineLearningClassifier.PredictionId>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifier.PredictionId>
+                </p5:MachineLearningClassifier>
+              </p2:ClassifyDocumentScope.Classifiers>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p2:ClassifyDocumentScope>
+            <p2:PresentClassificationStation AutomaticClassificationResults="[autoClassification]" DisplayName="Present Classification Station" DocumentObjectModel="[Digitize_dom]" DocumentPath="[Str_Path]" DocumentText="[Digitize_text]" sap:VirtualizedContainerService.HintSize="914.4,372" sap2010:WorkflowViewState.IdRef="PresentClassificationStation_4" Taxonomy="[taxonomy]" ValidatedClassificationResults="[Classification_Result]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p2:PresentClassificationStation>
+            <p6:TrainClassifiersScope HumanValidatedData="{x:Null}" DisplayName="Train Classifiers Scope" DocumentObjectModel="[Digitize_dom]" DocumentPath="[Str_Path]" DocumentText="[Digitize_text]" sap:VirtualizedContainerService.HintSize="914.4,610.4" HumanValidatedClassificationData="[Classification_Result]" sap2010:WorkflowViewState.IdRef="TrainClassifiersScope_4" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI5abdcd13f3a144a9aea01560ffc81d55&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Receipt&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}},&quot;UI735e51910d4f4b7e8bd66b5d530f9102&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Receipt&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}},&quot;UI9cc9fee863b04708ab2617ddb2de627f&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:&quot;\&quot;Invoice\&quot;&quot;,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;ImmersionLab.UiPath.Receipt&quot;,&quot;ClassifierDocumentTypeId&quot;:&quot;\&quot;receipt\&quot;&quot;,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI5abdcd13f3a144a9aea01560ffc81d55&quot;:&quot;0&quot;,&quot;UI9cc9fee863b04708ab2617ddb2de627f&quot;:&quot;0&quot;,&quot;UI735e51910d4f4b7e8bd66b5d530f9102&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI5abdcd13f3a144a9aea01560ffc81d55&quot;:[],&quot;UI735e51910d4f4b7e8bd66b5d530f9102&quot;:[],&quot;UI9cc9fee863b04708ab2617ddb2de627f&quot;:[&quot;Invoice&quot;,&quot;receipt&quot;]}}">
+              <p6:TrainClassifiersScope.Trainables>
+                <p6:KeywordBasedClassifierTrainer LearningData="{x:Null}" PredictionId="{x:Null}" DisplayName="Keyword Based Classifier Trainer" sap:VirtualizedContainerService.HintSize="233.6,355.2" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifierTrainer_1" LearningFilePath="DocumentProcessing\Keyword.json" PersistenceId="UI5abdcd13f3a144a9aea01560ffc81d55">
+                  <p6:KeywordBasedClassifierTrainer.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p4:Document">
+                      <DelegateArgumentValue x:TypeArguments="p4:Document">
+                        <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:KeywordBasedClassifierTrainer.DocumentObjectModel>
+                  <p6:KeywordBasedClassifierTrainer.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:KeywordBasedClassifierTrainer.DocumentPath>
+                  <p6:KeywordBasedClassifierTrainer.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:KeywordBasedClassifierTrainer.DocumentText>
+                  <p6:KeywordBasedClassifierTrainer.HumanValidatedData>
+                    <InArgument x:TypeArguments="p7:ExtractionResult[]">
+                      <DelegateArgumentValue x:TypeArguments="p7:ExtractionResult[]">
+                        <DelegateInArgument x:TypeArguments="p7:ExtractionResult[]" Name="HumanValidatedData" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:KeywordBasedClassifierTrainer.HumanValidatedData>
+                </p6:KeywordBasedClassifierTrainer>
+                <p6:IntelligentKeywordClassifierTrainer LearningData="{x:Null}" PredictionId="{x:Null}" DisplayName="Intelligent Keyword Classifier Trainer" sap:VirtualizedContainerService.HintSize="233.6,355.2" sap2010:WorkflowViewState.IdRef="IntelligentKeywordClassifierTrainer_1" LearningFilePath="DocumentProcessing\Intellignet_Keyword.json" PersistenceId="UI735e51910d4f4b7e8bd66b5d530f9102">
+                  <p6:IntelligentKeywordClassifierTrainer.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p4:Document">
+                      <DelegateArgumentValue x:TypeArguments="p4:Document">
+                        <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:IntelligentKeywordClassifierTrainer.DocumentObjectModel>
+                  <p6:IntelligentKeywordClassifierTrainer.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:IntelligentKeywordClassifierTrainer.DocumentPath>
+                  <p6:IntelligentKeywordClassifierTrainer.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:IntelligentKeywordClassifierTrainer.DocumentText>
+                  <p6:IntelligentKeywordClassifierTrainer.HumanValidatedData>
+                    <InArgument x:TypeArguments="p7:ExtractionResult[]">
+                      <DelegateArgumentValue x:TypeArguments="p7:ExtractionResult[]">
+                        <DelegateInArgument x:TypeArguments="p7:ExtractionResult[]" Name="HumanValidatedData" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p6:IntelligentKeywordClassifierTrainer.HumanValidatedData>
+                </p6:IntelligentKeywordClassifierTrainer>
+                <p5:MachineLearningClassifierTrainer OutputFolder="{x:Null}" PredictionId="{x:Null}" PublicDatasetApiKey="{x:Null}" PublicDatasetEndpoint="{x:Null}" Configuration="{}{&quot;SelectedMLSkill&quot;:&quot;DU_Classify&quot;,&quot;AvailableMLSkills&quot;:[&quot;DU_Classify&quot;,&quot;DU_Invoivce&quot;,&quot;DU_Receipt&quot;]}" DisplayName="Machine Learning Classifier Trainer" sap:VirtualizedContainerService.HintSize="233.6,355.2" sap2010:WorkflowViewState.IdRef="MachineLearningClassifierTrainer_1" PersistenceId="UI9cc9fee863b04708ab2617ddb2de627f" RetryOnFailure="True" SaveOriginalFiles="False" SelectedDataset="DU-Classification-Exports" SelectedProject="DU_Test" Timeout="100000">
+                  <p5:MachineLearningClassifierTrainer.AvailableDatasets>
+                    <scg:List x:TypeArguments="x:String" Capacity="4">
+                      <x:String>DU-Classification-Exports</x:String>
+                      <x:String>DU-Extraction-Exports</x:String>
+                      <x:String>Invoice</x:String>
+                      <x:String>receipt</x:String>
+                    </scg:List>
+                  </p5:MachineLearningClassifierTrainer.AvailableDatasets>
+                  <p5:MachineLearningClassifierTrainer.AvailableProjects>
+                    <scg:List x:TypeArguments="x:String" Capacity="1">
+                      <x:String>DU_Test</x:String>
+                    </scg:List>
+                  </p5:MachineLearningClassifierTrainer.AvailableProjects>
+                  <p5:MachineLearningClassifierTrainer.DocumentObjectModel>
+                    <InArgument x:TypeArguments="p4:Document">
+                      <DelegateArgumentValue x:TypeArguments="p4:Document">
+                        <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifierTrainer.DocumentObjectModel>
+                  <p5:MachineLearningClassifierTrainer.DocumentPath>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifierTrainer.DocumentPath>
+                  <p5:MachineLearningClassifierTrainer.DocumentText>
+                    <InArgument x:TypeArguments="x:String">
+                      <DelegateArgumentValue x:TypeArguments="x:String">
+                        <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifierTrainer.DocumentText>
+                  <p5:MachineLearningClassifierTrainer.HumanValidatedData>
+                    <InArgument x:TypeArguments="p7:ExtractionResult[]">
+                      <DelegateArgumentValue x:TypeArguments="p7:ExtractionResult[]">
+                        <DelegateInArgument x:TypeArguments="p7:ExtractionResult[]" Name="HumanValidatedData" />
+                      </DelegateArgumentValue>
+                    </InArgument>
+                  </p5:MachineLearningClassifierTrainer.HumanValidatedData>
+                </p5:MachineLearningClassifierTrainer>
+              </p6:TrainClassifiersScope.Trainables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p6:TrainClassifiersScope>
+            <ui:ForEach x:TypeArguments="p7:ClassificationResult" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="914.4,3340" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Classification_Result]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="p7:ClassificationResult">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="p7:ClassificationResult" Name="classificationResult" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="676,3152" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="p7:ExtractionResult" Name="Extraction_Result" />
+                      <Variable x:TypeArguments="p7:ExtractionResult" Name="Vaild_Extract_Result" />
+                      <Variable x:TypeArguments="sd2:DataSet" Name="Dataset_Result" />
+                      <Variable x:TypeArguments="x:String" Name="Vendor_Name" />
+                      <Variable x:TypeArguments="x:String" Name="Total" />
+                      <Variable x:TypeArguments="upaf:FormTaskData" Name="Approval_ActionTask" />
+                      <Variable x:TypeArguments="scg:List(upat:TaskUserAssignment)" Name="taskUserAssignments" />
+                      <Variable x:TypeArguments="upat:TaskUserAssignment" Name="taskUserAssignment" />
+                      <Variable x:TypeArguments="upaf:FormTaskData" Name="action_task_result" />
+                      <Variable x:TypeArguments="x:String" Name="파일이름" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="632.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_16">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Action]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">approval</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="632.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Category : &quot;+classificationResult.DocumentTypeId+&quot; / Confidence : &quot;+classificationResult.Confidence.ToString]" />
+                    <p8:DataExtractionScope DocumentTypeId="{x:Null}" ApplyGenerativeValidation="False" ClassificationResult="[classificationResult]" DisplayName="Data Extraction Scope" DocumentObjectModel="[Digitize_dom]" DocumentPath="[Str_Path]" DocumentText="[Digitize_text]" ExtractionResult="[Extraction_Result]" FormatValuesIfPossible="True" GenerativeValidationConfidenceThreshold="99" sap:VirtualizedContainerService.HintSize="632.8,521.6" sap2010:WorkflowViewState.IdRef="DataExtractionScope_3" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UId139905210cf40488d9f6273b67eb350&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UI52be01607ca64988a6eca7e1569dc54e&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;line-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI52be01607ca64988a6eca7e1569dc54e&quot;:&quot;0&quot;,&quot;UId139905210cf40488d9f6273b67eb350&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UId139905210cf40488d9f6273b67eb350&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;receipt-number&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null}],&quot;Metadata&quot;:null}],&quot;Metadata&quot;:[{&quot;Key&quot;:&quot;schema&quot;,&quot;Value&quot;:&quot;{\&quot;model\&quot;: \&quot;receipts\&quot;, \&quot;api_version\&quot;: \&quot;1.2\&quot;, \&quot;tags\&quot;: [{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;vendor-addr\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;date\&quot;, \&quot;type\&quot;: \&quot;date\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;total\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;tax\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;receipt-number\&quot;, \&quot;type\&quot;: \&quot;id-no\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;description\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}, {\&quot;name\&quot;: \&quot;quantity\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}, {\&quot;name\&quot;: \&quot;unit-price\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}, {\&quot;name\&quot;: \&quot;line-amount\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}], \&quot;schema\&quot;: {\&quot;extraction\&quot;: [{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_line\&quot;: true, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#ff0088\&quot;, \&quot;hotkey\&quot;: \&quot;n\&quot;, \&quot;display_name\&quot;: \&quot;Name Vendor\&quot;}, {\&quot;name\&quot;: \&quot;vendor-addr\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_line\&quot;: true, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#608068\&quot;, \&quot;hotkey\&quot;: \&quot;v\&quot;, \&quot;display_name\&quot;: \&quot;Vendor Address\&quot;}, {\&quot;name\&quot;: \&quot;date\&quot;, \&quot;type\&quot;: \&quot;date\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#110040\&quot;, \&quot;hotkey\&quot;: \&quot;d\&quot;, \&quot;display_name\&quot;: \&quot;Date\&quot;}, {\&quot;name\&quot;: \&quot;total\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;largest_value\&quot;, \&quot;color\&quot;: \&quot;#eabfff\&quot;, \&quot;hotkey\&quot;: \&quot;t\&quot;, \&quot;display_name\&quot;: \&quot;Total Amount\&quot;}, {\&quot;name\&quot;: \&quot;tax\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#ee00ff\&quot;, \&quot;hotkey\&quot;: \&quot;a\&quot;, \&quot;display_name\&quot;: \&quot;Tax Amount\&quot;}, {\&quot;name\&quot;: \&quot;receipt-number\&quot;, \&quot;type\&quot;: \&quot;id-no\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#807160\&quot;, \&quot;hotkey\&quot;: \&quot;r\&quot;, \&quot;display_name\&quot;: \&quot;Receipt Number\&quot;}, {\&quot;name\&quot;: \&quot;description\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;split_items\&quot;: false, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#686080\&quot;, \&quot;hotkey\&quot;: \&quot;e\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Description\&quot;}, {\&quot;name\&quot;: \&quot;quantity\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;split_items\&quot;: true, \&quot;color\&quot;: \&quot;#bf60b9\&quot;, \&quot;hotkey\&quot;: \&quot;q\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Quantity\&quot;}, {\&quot;name\&quot;: \&quot;unit-price\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;split_items\&quot;: true, \&quot;color\&quot;: \&quot;#ff8c40\&quot;, \&quot;hotkey\&quot;: \&quot;u\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Unit Price\&quot;}, {\&quot;name\&quot;: \&quot;line-amount\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;split_items\&quot;: true, \&quot;color\&quot;: \&quot;#7f7920\&quot;, \&quot;hotkey\&quot;: \&quot;l\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Line Amount\&quot;}], \&quot;classification\&quot;: {}}, \&quot;release\&quot;: \&quot;ga\&quot;}&quot;}]}],&quot;UI52be01607ca64988a6eca7e1569dc54e&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;billing-name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;billing-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;invoice-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;payment-terms&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;net-amount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;due-date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;tax-rate&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;line-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null}],&quot;Metadata&quot;:null}],&quot;Metadata&quot;:[{&quot;Key&quot;:&quot;schema&quot;,&quot;Value&quot;:&quot;{\&quot;model\&quot;: \&quot;invoices\&quot;, \&quot;api_version\&quot;: \&quot;1.2\&quot;, \&quot;tags\&quot;: [{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;vendor-addr\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;billing-name\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;billing-addr\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;invoice-no\&quot;, \&quot;type\&quot;: \&quot;id-no\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;date\&quot;, \&quot;type\&quot;: \&quot;date\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;tax\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;total\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;payment-terms\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;net-amount\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;due-date\&quot;, \&quot;type\&quot;: \&quot;date\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;tax-rate\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_valued\&quot;: false}, {\&quot;name\&quot;: \&quot;description\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}, {\&quot;name\&quot;: \&quot;quantity\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}, {\&quot;name\&quot;: \&quot;unit-price\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}, {\&quot;name\&quot;: \&quot;line-amount\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}, {\&quot;name\&quot;: \&quot;line-no\&quot;, \&quot;type\&quot;: \&quot;id-no\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;table_id\&quot;: \&quot;\&quot;}], \&quot;schema\&quot;: {\&quot;extraction\&quot;: [{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_line\&quot;: true, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#ff0088\&quot;, \&quot;hotkey\&quot;: \&quot;n\&quot;, \&quot;display_name\&quot;: \&quot;Vendor Name\&quot;}, {\&quot;name\&quot;: \&quot;vendor-addr\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_line\&quot;: true, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#65d642\&quot;, \&quot;hotkey\&quot;: \&quot;v\&quot;, \&quot;display_name\&quot;: \&quot;Vendor Address\&quot;}, {\&quot;name\&quot;: \&quot;billing-name\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_line\&quot;: true, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#7f5140\&quot;, \&quot;hotkey\&quot;: \&quot;b\&quot;, \&quot;display_name\&quot;: \&quot;Billing Name\&quot;}, {\&quot;name\&quot;: \&quot;billing-addr\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_line\&quot;: true, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#ff8c40\&quot;, \&quot;hotkey\&quot;: \&quot;i\&quot;, \&quot;display_name\&quot;: \&quot;Billing Address\&quot;}, {\&quot;name\&quot;: \&quot;invoice-no\&quot;, \&quot;type\&quot;: \&quot;id-no\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#f2ff40\&quot;, \&quot;hotkey\&quot;: \&quot;o\&quot;, \&quot;display_name\&quot;: \&quot;Invoice Number\&quot;}, {\&quot;name\&quot;: \&quot;date\&quot;, \&quot;type\&quot;: \&quot;date\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#110040\&quot;, \&quot;hotkey\&quot;: \&quot;d\&quot;, \&quot;display_name\&quot;: \&quot;Invoice Date\&quot;}, {\&quot;name\&quot;: \&quot;tax\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#eabfff\&quot;, \&quot;hotkey\&quot;: \&quot;t\&quot;, \&quot;display_name\&quot;: \&quot;Tax Amount\&quot;}, {\&quot;name\&quot;: \&quot;total\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;largest_value\&quot;, \&quot;color\&quot;: \&quot;#ee00ff\&quot;, \&quot;hotkey\&quot;: \&quot;a\&quot;, \&quot;display_name\&quot;: \&quot;Total Amount\&quot;}, {\&quot;name\&quot;: \&quot;payment-terms\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;multi_line\&quot;: true, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#005580\&quot;, \&quot;hotkey\&quot;: \&quot;y\&quot;, \&quot;display_name\&quot;: \&quot;Payment Terms\&quot;}, {\&quot;name\&quot;: \&quot;net-amount\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#7f2039\&quot;, \&quot;hotkey\&quot;: \&quot;-\&quot;, \&quot;display_name\&quot;: \&quot;Net Amount\&quot;}, {\&quot;name\&quot;: \&quot;due-date\&quot;, \&quot;type\&quot;: \&quot;date\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#9e78db\&quot;, \&quot;hotkey\&quot;: \&quot;u\&quot;, \&quot;display_name\&quot;: \&quot;Due Date\&quot;}, {\&quot;name\&quot;: \&quot;tax-rate\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;multi_line\&quot;: false, \&quot;post_processing\&quot;: \&quot;first_span\&quot;, \&quot;color\&quot;: \&quot;#b43252\&quot;, \&quot;hotkey\&quot;: \&quot;k\&quot;, \&quot;display_name\&quot;: \&quot;Tax Rate\&quot;}, {\&quot;name\&quot;: \&quot;description\&quot;, \&quot;type\&quot;: \&quot;string\&quot;, \&quot;split_items\&quot;: false, \&quot;scoring\&quot;: \&quot;levenshtein\&quot;, \&quot;color\&quot;: \&quot;#bf60b9\&quot;, \&quot;hotkey\&quot;: \&quot;1\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Description\&quot;}, {\&quot;name\&quot;: \&quot;quantity\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;split_items\&quot;: true, \&quot;color\&quot;: \&quot;#401036\&quot;, \&quot;hotkey\&quot;: \&quot;2\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Quantity\&quot;}, {\&quot;name\&quot;: \&quot;unit-price\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;split_items\&quot;: true, \&quot;color\&quot;: \&quot;#ffc480\&quot;, \&quot;hotkey\&quot;: \&quot;3\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Unit Price\&quot;}, {\&quot;name\&quot;: \&quot;line-amount\&quot;, \&quot;type\&quot;: \&quot;number\&quot;, \&quot;split_items\&quot;: true, \&quot;color\&quot;: \&quot;#7f7920\&quot;, \&quot;hotkey\&quot;: \&quot;4\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Line Amount\&quot;}, {\&quot;name\&quot;: \&quot;line-no\&quot;, \&quot;type\&quot;: \&quot;id-no\&quot;, \&quot;split_items\&quot;: false, \&quot;color\&quot;: \&quot;#ff0000\&quot;, \&quot;hotkey\&quot;: \&quot;6\&quot;, \&quot;section\&quot;: \&quot;items\&quot;, \&quot;display_name\&quot;: \&quot;Line Number\&quot;}], \&quot;classification\&quot;: {}}, \&quot;release\&quot;: \&quot;ga\&quot;}&quot;}]}]}}">
+                      <p8:DataExtractionScope.Extractors>
+                        <p5:MachineLearningExtractor Endpoint="{x:Null}" ApiKey="[apiSTR]" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;apiSTR&quot;,&quot;SelectedMLSkill&quot;:&quot;DU_Receipt&quot;,&quot;AvailableMLSkills&quot;:[&quot;DU_Classify&quot;,&quot;DU_Invoivce&quot;,&quot;DU_Receipt&quot;]}" DisplayName="Machine Learning Extractor" sap:VirtualizedContainerService.HintSize="233.6,195.2" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_3" PersistenceId="UId139905210cf40488d9f6273b67eb350" RetryOnFailure="True" SelectedMLSkill="DU_Receipt" Timeout="100000" UseServerSideOCR="False">
+                          <p5:MachineLearningExtractor.AvailableMLSkills>
+                            <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True">
+                              <x:String>DU_Classify</x:String>
+                              <x:String>DU_Invoivce</x:String>
+                              <x:String>DU_Receipt</x:String>
+                            </sc:BindingList>
+                          </p5:MachineLearningExtractor.AvailableMLSkills>
+                          <p5:MachineLearningExtractor.DocumentBounds>
+                            <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
+                              <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                                <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentBounds>
+                          <p5:MachineLearningExtractor.DocumentObjectModel>
+                            <InArgument x:TypeArguments="p4:Document">
+                              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentObjectModel>
+                          <p5:MachineLearningExtractor.DocumentPath>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentPath>
+                          <p5:MachineLearningExtractor.DocumentText>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentText>
+                          <p5:MachineLearningExtractor.ExtractorDocumentType>
+                            <InArgument x:TypeArguments="p9:ExtractorDocumentType">
+                              <DelegateArgumentValue x:TypeArguments="p9:ExtractorDocumentType">
+                                <DelegateInArgument x:TypeArguments="p9:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.ExtractorDocumentType>
+                          <p5:MachineLearningExtractor.ExtractorResult>
+                            <OutArgument x:TypeArguments="p9:ExtractorResult">
+                              <DelegateArgumentReference x:TypeArguments="p9:ExtractorResult">
+                                <DelegateOutArgument x:TypeArguments="p9:ExtractorResult" Name="ExtractorResult" />
+                              </DelegateArgumentReference>
+                            </OutArgument>
+                          </p5:MachineLearningExtractor.ExtractorResult>
+                          <p5:MachineLearningExtractor.PredictionId>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.PredictionId>
+                        </p5:MachineLearningExtractor>
+                        <p5:MachineLearningExtractor Endpoint="{x:Null}" ApiKey="[apiSTR]" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;apiSTR&quot;,&quot;SelectedMLSkill&quot;:&quot;DU_Invoivce&quot;,&quot;AvailableMLSkills&quot;:[&quot;DU_Classify&quot;,&quot;DU_Invoivce&quot;,&quot;DU_Receipt&quot;]}" DisplayName="Machine Learning Extractor" sap:VirtualizedContainerService.HintSize="233.6,195.2" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_4" PersistenceId="UI52be01607ca64988a6eca7e1569dc54e" RetryOnFailure="True" SelectedMLSkill="DU_Invoivce" Timeout="100000" UseServerSideOCR="False">
+                          <p5:MachineLearningExtractor.AvailableMLSkills>
+                            <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True">
+                              <x:String>DU_Classify</x:String>
+                              <x:String>DU_Invoivce</x:String>
+                              <x:String>DU_Receipt</x:String>
+                            </sc:BindingList>
+                          </p5:MachineLearningExtractor.AvailableMLSkills>
+                          <p5:MachineLearningExtractor.DocumentBounds>
+                            <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
+                              <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                                <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentBounds>
+                          <p5:MachineLearningExtractor.DocumentObjectModel>
+                            <InArgument x:TypeArguments="p4:Document">
+                              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentObjectModel>
+                          <p5:MachineLearningExtractor.DocumentPath>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentPath>
+                          <p5:MachineLearningExtractor.DocumentText>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.DocumentText>
+                          <p5:MachineLearningExtractor.ExtractorDocumentType>
+                            <InArgument x:TypeArguments="p9:ExtractorDocumentType">
+                              <DelegateArgumentValue x:TypeArguments="p9:ExtractorDocumentType">
+                                <DelegateInArgument x:TypeArguments="p9:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.ExtractorDocumentType>
+                          <p5:MachineLearningExtractor.ExtractorResult>
+                            <OutArgument x:TypeArguments="p9:ExtractorResult">
+                              <DelegateArgumentReference x:TypeArguments="p9:ExtractorResult">
+                                <DelegateOutArgument x:TypeArguments="p9:ExtractorResult" Name="ExtractorResult" />
+                              </DelegateArgumentReference>
+                            </OutArgument>
+                          </p5:MachineLearningExtractor.ExtractorResult>
+                          <p5:MachineLearningExtractor.PredictionId>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractor.PredictionId>
+                        </p5:MachineLearningExtractor>
+                      </p8:DataExtractionScope.Extractors>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p8:DataExtractionScope>
+                    <p:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[Extraction_Result]" DisplayName="Present Validation Station" DocumentObjectModel="[Digitize_dom]" DocumentPath="[Str_Path]" DocumentText="[Digitize_text]" sap:VirtualizedContainerService.HintSize="632.8,372" sap2010:WorkflowViewState.IdRef="PresentValidationStation_3" ShowOnlyRelevantPageRange="False" Taxonomy="[taxonomy]" ValidatedExtractionResults="[Vaild_Extract_Result]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p:PresentValidationStation>
+                    <p6:TrainExtractorsScope DisplayName="Train Extractors Scope" DocumentObjectModel="[Digitize_dom]" DocumentPath="[Str_Path]" DocumentText="[Digitize_text]" sap:VirtualizedContainerService.HintSize="632.8,610.4" HumanValidatedData="[Vaild_Extract_Result]" sap2010:WorkflowViewState.IdRef="TrainExtractorsScope_4" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIb2611a9fd9b04972adba36db1595ea35&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UI563771f31690471188a3515b16c8bf2c&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VendorName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.VenderAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.BillingAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.InvoiceDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.NetAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.DueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.TaxRate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Invoice.Items.LineNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;ImmersionLab.UiPath.Receipt&quot;:{&quot;FieldMappings&quot;:{&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.NameVendor&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TotalAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.ReceiptNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;receipt-number\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;ImmersionLab.UiPath.Receipt.Items.LineAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;line-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI563771f31690471188a3515b16c8bf2c&quot;:&quot;0&quot;,&quot;UIb2611a9fd9b04972adba36db1595ea35&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UIb2611a9fd9b04972adba36db1595ea35&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;receipt-number&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null}],&quot;Metadata&quot;:null}],&quot;Metadata&quot;:null}],&quot;UI563771f31690471188a3515b16c8bf2c&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;receipt-number&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null}],&quot;Metadata&quot;:null}],&quot;Metadata&quot;:null}]}}">
+                      <p6:TrainExtractorsScope.Trainables>
+                        <p5:MachineLearningExtractorTrainer AvailableMLSkills="{x:Null}" Endpoint="{x:Null}" PublicDatasetApiKey="{x:Null}" PublicDatasetEndpoint="{x:Null}" SelectedMLSkill="{x:Null}" Configuration="{}{&quot;ApiKey&quot;:&quot;Pj8/dXX0y6VYkkRWLtbE6gqKVg6d4Ale4YjNz2+a5/DW1UUsn5aW+pPdL4Tp4OjwQ8lRfDEhh+EQAxLv89roSg==&quot;,&quot;SelectedMLSkill&quot;:&quot;DU_Receipt&quot;,&quot;AvailableMLSkills&quot;:[&quot;DU_Classify&quot;,&quot;DU_Receipt&quot;]}" DisplayName="Machine Learning Extractor Trainer" sap:VirtualizedContainerService.HintSize="233.6,355.2" sap2010:WorkflowViewState.IdRef="MachineLearningExtractorTrainer_3" OutputFolder="C:\Users\imseonbin\Documents\UiPath\Invoice_DU\Data\Retraining_Invoice" PersistenceId="UIb2611a9fd9b04972adba36db1595ea35" RetryOnFailure="True" SelectedDataset="DU-Extraction-Exports" SelectedProject="DU_Test" Timeout="100000">
+                          <p5:MachineLearningExtractorTrainer.AvailableDatasets>
+                            <scg:List x:TypeArguments="x:String" Capacity="4">
+                              <x:String>DU-Classification-Exports</x:String>
+                              <x:String>DU-Extraction-Exports</x:String>
+                              <x:String>Invoice</x:String>
+                              <x:String>receipt</x:String>
+                            </scg:List>
+                          </p5:MachineLearningExtractorTrainer.AvailableDatasets>
+                          <p5:MachineLearningExtractorTrainer.AvailableProjects>
+                            <scg:List x:TypeArguments="x:String" Capacity="1">
+                              <x:String>DU_Test</x:String>
+                            </scg:List>
+                          </p5:MachineLearningExtractorTrainer.AvailableProjects>
+                          <p5:MachineLearningExtractorTrainer.DocumentObjectModel>
+                            <InArgument x:TypeArguments="p4:Document">
+                              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.DocumentObjectModel>
+                          <p5:MachineLearningExtractorTrainer.DocumentPath>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.DocumentPath>
+                          <p5:MachineLearningExtractorTrainer.DocumentText>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.DocumentText>
+                          <p5:MachineLearningExtractorTrainer.HumanValidatedData>
+                            <InArgument x:TypeArguments="p7:ExtractionResult[]">
+                              <DelegateArgumentValue x:TypeArguments="p7:ExtractionResult[]">
+                                <DelegateInArgument x:TypeArguments="p7:ExtractionResult[]" Name="HumanValidatedData" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.HumanValidatedData>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </p5:MachineLearningExtractorTrainer>
+                        <p5:MachineLearningExtractorTrainer AvailableMLSkills="{x:Null}" Endpoint="{x:Null}" PublicDatasetApiKey="{x:Null}" PublicDatasetEndpoint="{x:Null}" SelectedMLSkill="{x:Null}" Configuration="{}{&quot;ApiKey&quot;:&quot;Pj8/dXX0y6VYkkRWLtbE6gqKVg6d4Ale4YjNz2+a5/DW1UUsn5aW+pPdL4Tp4OjwQ8lRfDEhh+EQAxLv89roSg==&quot;,&quot;SelectedMLSkill&quot;:&quot;DU_Receipt&quot;,&quot;AvailableMLSkills&quot;:[&quot;DU_Classify&quot;,&quot;DU_Receipt&quot;]}" DisplayName="Machine Learning Extractor Trainer" sap:VirtualizedContainerService.HintSize="233.6,355.2" sap2010:WorkflowViewState.IdRef="MachineLearningExtractorTrainer_1" OutputFolder="C:\Users\imseonbin\Documents\UiPath\Invoice_DU\Data\Retraining_Receipt" PersistenceId="UI563771f31690471188a3515b16c8bf2c" RetryOnFailure="True" SelectedDataset="DU-Extraction-Exports" SelectedProject="DU_Test" Timeout="100000">
+                          <p5:MachineLearningExtractorTrainer.AvailableDatasets>
+                            <scg:List x:TypeArguments="x:String" Capacity="4">
+                              <x:String>DU-Classification-Exports</x:String>
+                              <x:String>DU-Extraction-Exports</x:String>
+                              <x:String>Invoice</x:String>
+                              <x:String>receipt</x:String>
+                            </scg:List>
+                          </p5:MachineLearningExtractorTrainer.AvailableDatasets>
+                          <p5:MachineLearningExtractorTrainer.AvailableProjects>
+                            <scg:List x:TypeArguments="x:String" Capacity="1">
+                              <x:String>DU_Test</x:String>
+                            </scg:List>
+                          </p5:MachineLearningExtractorTrainer.AvailableProjects>
+                          <p5:MachineLearningExtractorTrainer.DocumentObjectModel>
+                            <InArgument x:TypeArguments="p4:Document">
+                              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.DocumentObjectModel>
+                          <p5:MachineLearningExtractorTrainer.DocumentPath>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.DocumentPath>
+                          <p5:MachineLearningExtractorTrainer.DocumentText>
+                            <InArgument x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.DocumentText>
+                          <p5:MachineLearningExtractorTrainer.HumanValidatedData>
+                            <InArgument x:TypeArguments="p7:ExtractionResult[]">
+                              <DelegateArgumentValue x:TypeArguments="p7:ExtractionResult[]">
+                                <DelegateInArgument x:TypeArguments="p7:ExtractionResult[]" Name="HumanValidatedData" />
+                              </DelegateArgumentValue>
+                            </InArgument>
+                          </p5:MachineLearningExtractorTrainer.HumanValidatedData>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </p5:MachineLearningExtractorTrainer>
+                      </p6:TrainExtractorsScope.Trainables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p6:TrainExtractorsScope>
+                    <p8:ExportExtractionResults DataSet="[Dataset_Result]" DisplayName="Export Extraction Results" ExtractionResult="[Vaild_Extract_Result]" sap:VirtualizedContainerService.HintSize="632.8,176.8" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="False" IncludeOCRConfidence="False" />
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="632.8,24.8" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="512,136.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Action Center" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.4,546.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <TryCatch.Try>
+                                <Sequence sap:VirtualizedContainerService.HintSize="496,315.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[Vendor_Name]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Invoice.VendorName")(0).DerivedValue]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[Total]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Invoice.TotalAmount")(0).DerivedValue]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </TryCatch.Try>
+                              <TryCatch.Catches>
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ActivityAction x:TypeArguments="s:Exception">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                    </ActivityAction.Argument>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="496,508" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Receipt 수행&quot;]" />
+                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[Vendor_Name]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Receipt.NameVendor")(0).DerivedValue]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[Total]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Receipt.TotalAmount")(0).DerivedValue]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </Catch>
+                              </TryCatch.Catches>
+                            </TryCatch>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="534.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Vendor Name : &quot;+Vendor_Name+vbNewLine+&#xA;&quot;Total : &quot;+Total]" />
+                            <Assign sap:VirtualizedContainerService.HintSize="534.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="scg:List(upat:TaskUserAssignment)">[taskUserAssignments]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="scg:List(upat:TaskUserAssignment)">[new List(of TaskUserAssignment)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="534.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="upat:TaskUserAssignment">[taskUserAssignment]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="upat:TaskUserAssignment">[new TaskUserAssignment()]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <upaf:CreateFormTask BucketFolderPath="{x:Null}" BucketName="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" BulkFormLayoutGuid="20e9abcd-d587-498a-8bb9-e83832cdbcd6" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="True" FolderPath="Shared" FormLayout="%[{&quot;label&quot;:&quot;청구서 요약&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;invoice_summary&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;청구서 처리 액션&quot;,&quot;optionsLabelPosition&quot;:&quot;right&quot;,&quot;inline&quot;:false,&quot;tableView&quot;:false,&quot;values&quot;:[{&quot;label&quot;:&quot;승인&quot;,&quot;value&quot;:&quot;approval&quot;,&quot;shortcut&quot;:&quot;A&quot;},{&quot;label&quot;:&quot;반려&quot;,&quot;value&quot;:&quot;반려&quot;,&quot;shortcut&quot;:&quot;R&quot;}],&quot;key&quot;:&quot;approval_action&quot;,&quot;type&quot;:&quot;radio&quot;,&quot;input&quot;:true},{&quot;mask&quot;:false,&quot;customClass&quot;:&quot;uipath-button-container&quot;,&quot;tableView&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;type&quot;:&quot;table&quot;,&quot;input&quot;:false,&quot;key&quot;:&quot;key&quot;,&quot;label&quot;:&quot;label&quot;,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;제출&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:true}]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]},{&quot;components&quot;:[]}]],&quot;numRows&quot;:1,&quot;numCols&quot;:6,&quot;reorder&quot;:false}]" FormLayoutGuid="1fe4ced7-25db-49d4-b96e-4b9e27e16a5a" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="534.6666666666666,382.6666666666667" sap2010:WorkflowViewState.IdRef="CreateFormTask_3" TaskCatalog="[&quot;TaskApproval&quot;]" TaskOutput="[Approval_ActionTask]" TaskPriority="[TaskPriority.Medium]" TaskTitle="[String.Format(&quot;청구서 승인-{0}-{1}&quot;, Vendor_Name, Total)]">
+                              <upaf:CreateFormTask.FormData>
+                                <InArgument x:TypeArguments="x:String" x:Key="invoice_summary">[string.Format("{0} 청구서 총 금액은 {1} 입니다. ", Vendor_Name, Total)]</InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="approval_action">[Action]</OutArgument>
+                              </upaf:CreateFormTask.FormData>
+                            </upaf:CreateFormTask>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="s:Nullable(x:Int64)">[taskUserAssignment.TaskId]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="s:Nullable(x:Int64)">[Approval_ActionTask.Id]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[taskUserAssignment.UserNameOrEmail]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">hjchoi@kcc.co.kr</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uasc:AppendItemToCollection x:TypeArguments="upat:TaskUserAssignment" Collection="[taskUserAssignments]" DisplayName="Append item to collection" sap:VirtualizedContainerService.HintSize="434,145.33333333333334" sap2010:WorkflowViewState.IdRef="AppendItemToCollection`1_1">
+                              <uasc:AppendItemToCollection.Items>
+                                <scg:List x:TypeArguments="InArgument(upat:TaskUserAssignment)" Capacity="4">
+                                  <InArgument x:TypeArguments="upat:TaskUserAssignment">[taskUserAssignment]</InArgument>
+                                </scg:List>
+                              </uasc:AppendItemToCollection.Items>
+                            </uasc:AppendItemToCollection>
+                            <upat:AssignTasks FailedTaskAssignments="{x:Null}" TaskId="{x:Null}" TimeoutMs="{x:Null}" DisplayName="Assign Tasks" EnableMultipleAssignments="True" sap:VirtualizedContainerService.HintSize="434,228.66666666666666" sap2010:WorkflowViewState.IdRef="AssignTasks_1" MigrateV144="True" TaskAssignmentType="[TaskAssignmentType.Assign]" TaskUserAssignments="[taskUserAssignments]" UserNameOrEmail="hjchoi@kcc.co.kr" />
+                            <upaf:WaitForFormTaskAndResume StatusMessage="{x:Null}" TaskAction="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" DisplayName="Wait for Form Task and Resume" sap:VirtualizedContainerService.HintSize="434,228.66666666666666" sap2010:WorkflowViewState.IdRef="WaitForFormTaskAndResume_1" TaskInput="[Approval_ActionTask]" TaskOutput="[action_task_result]" />
+                          </Sequence>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="632.8,24.8" sap2010:WorkflowViewState.IdRef="CommentOut_19">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="512,136.8" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Form" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <TryCatch.Try>
+                                <Sequence sap:VirtualizedContainerService.HintSize="496,315.2" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[Vendor_Name]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Invoice.VendorName")(0).DerivedValue]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[Total]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Invoice.TotalAmount")(0).DerivedValue]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </TryCatch.Try>
+                              <TryCatch.Catches>
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ActivityAction x:TypeArguments="s:Exception">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                    </ActivityAction.Argument>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="496,508" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Receipt 수행&quot;]" />
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[Vendor_Name]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Receipt.NameVendor")(0).DerivedValue]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[Total]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[Extraction_Result.GetSimpleFieldValues("ImmersionLab.UiPath.Receipt.TotalAmount")(0).DerivedValue]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </Catch>
+                              </TryCatch.Catches>
+                            </TryCatch>
+                            <ufa:ShowFormActivity Height="{x:Null}" InstanceName="{x:Null}" Left="{x:Null}" Top="{x:Null}" Width="{x:Null}" DisplayName="양식 표시" FormId="b5ece8d1-ea4f-485f-9cb5-ce63b45466a3" sap:VirtualizedContainerService.HintSize="387.2,187.2" sap2010:WorkflowViewState.IdRef="ShowFormActivity_2" IsAsync="False" Title="청구서 승인" WindowState="[UiPath.Studio.Forms.Runtime.WindowState.Normal]">
+                              <ufa:ShowFormActivity.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="invoice_summary">[String.Format("{0} 청구서 총 금액은 {1} 원 입니다. ", Vendor_Name, Total)]</InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="approval_action">[Action]</OutArgument>
+                              </ufa:ShowFormActivity.Arguments>
+                              <ufa:ShowFormActivity.ShowInTaskbar>
+                                <InArgument x:TypeArguments="s:Nullable(x:Boolean)">
+                                  <Literal x:TypeArguments="s:Nullable(x:Boolean)" Value="True" />
+                                </InArgument>
+                              </ufa:ShowFormActivity.ShowInTaskbar>
+                              <ufa:ShowFormActivity.ShowMargin>
+                                <InArgument x:TypeArguments="s:Nullable(x:Boolean)">
+                                  <Literal x:TypeArguments="s:Nullable(x:Boolean)" Value="False" />
+                                </InArgument>
+                              </ufa:ShowFormActivity.ShowMargin>
+                              <ufa:ShowFormActivity.TopMost>
+                                <InArgument x:TypeArguments="s:Nullable(x:Boolean)">
+                                  <Literal x:TypeArguments="s:Nullable(x:Boolean)" Value="True" />
+                                </InArgument>
+                              </ufa:ShowFormActivity.TopMost>
+                            </ufa:ShowFormActivity>
+                          </Sequence>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <Assign sap:VirtualizedContainerService.HintSize="632.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[파일이름]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Path.GetFileName(CurrentFile)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <If Condition="[Action.Equals(&quot;approval&quot;)]" sap:VirtualizedContainerService.HintSize="632.8,666.4" sap2010:WorkflowViewState.IdRef="If_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="453.6,483.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="410.4,393.6" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Dataset_Result.Tables]">
+                            <ui:ForEach.Body>
+                              <ActivityAction x:TypeArguments="sd2:DataTable">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd2:DataTable" Name="table" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="376.8,205.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:WriteRange AddHeaders="True" DataTable="[table]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[table.TableName]" StartingCell="A1" WorkbookPath="[&quot;Data\Result\&quot;+파일이름+&quot;_&quot;+table.TableName+&quot;.xlsx&quot;]" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEach.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:ForEach>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="300,80.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
